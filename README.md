@@ -2,7 +2,7 @@
 
 <img src="https://github.com/alirezanasrollahzadeh2003/AnCrashLytics/blob/master/logo-no-background.png" alt="An CrashLytics">
 
-**A service for analyzing and tracking errors in mobile applications.**
+**A fully customized service for analyzing and tracking errors in mobile applications, independent of any external service.**
 
 <h1>How To Use</h1>
 
@@ -37,3 +37,13 @@ class AnApplication : Application() {
 ```
 <uses-permission android:name="android.permission.INTERNET"/>
 ```
+
+**Matched With JetPack Compose And Xml**
+
+# Parameter
+Required parameters for backend coding retrieval:
+
+| exception | app_version | android_version |
+| ------- | ------- | ------- |
+
+**Here's a simple backend code snippet that you can use:**
