@@ -47,3 +47,17 @@ Required parameters for backend coding retrieval:
 | ------- | ------- | ------- |
 
 **Here's a simple backend code snippet that you can use:**
+
+php code
+```
+$exception = $_POST['exception'];
+$android_version = $_POST['android_version'];
+$app_version = $_POST['app_version'];
+```
+
+**Note: PHP has been used as an example, but you can use any backend language**
+
+**My Personal WebSite**
+
+https://alirezanasrollahzadeh.ir
+
