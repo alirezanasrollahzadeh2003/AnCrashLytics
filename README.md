@@ -1,3 +1,39 @@
 # AnCrashLytics
 
 <img src="https://github.com/alirezanasrollahzadeh2003/AnCrashLytics/blob/master/logo-no-background.png" alt="An CrashLytics">
+
+**A service for analyzing and tracking errors in mobile applications.**
+
+<h1>How To Use</h1>
+
+Add the JitPack repository to your build file. Add it in your root build.gradle at the end of repositories
+
+```
+allprojects {
+    repositories {
+    	...
+    	maven { url 'https://jitpack.io' }
+    }
+} 
+```
+
+Add the dependency
+```
+implementation 'com.github.alirezanasrollahzadeh2003:AnCrashLytics:1.0.0'
+```
+
+Implementation
+```
+class AnApplication : Application() {
+    override fun onCreate() {
+        super.onCreate()
+        AnCrashLytics(this,baseUrl = "http://192.168.1.53/AlirezaNasrollahzadeh/index.php").init()
+    }
+}
+```
+
+**Uses-Permission**
+
+```
+<uses-permission android:name="android.permission.INTERNET"/>
+```
