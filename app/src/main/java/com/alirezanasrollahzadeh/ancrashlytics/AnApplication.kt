@@ -8,6 +8,6 @@ import android.app.Application
 class AnApplication : Application() {
     override fun onCreate() {
         super.onCreate()
-        AnCrashLytics(this,baseUrl = "http://192.168.1.53/AlirezaNasrollahzadeh/index.php").init()
+        AnCrashLytics(this,baseUrl = "http://192.168.1.53:8000/api/crash").init()
     }
 }

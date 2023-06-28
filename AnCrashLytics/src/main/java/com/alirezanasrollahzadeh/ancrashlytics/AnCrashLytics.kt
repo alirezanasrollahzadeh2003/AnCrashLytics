@@ -5,8 +5,10 @@ import android.os.Build
 import android.util.Log
 import com.alirezanasrollahzadeh.ancrashlytics.Services.ApiServices
 import kotlinx.coroutines.DelicateCoroutinesApi
+import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.newSingleThreadContext
 
 /*Developed By Alireza Nasrollahzadeh*/
 
@@ -18,7 +20,7 @@ class AnCrashLytics constructor(val context:Context,val baseUrl : String): Threa
     @OptIn(DelicateCoroutinesApi::class)
     override fun uncaughtException(thread: Thread, throwable: Throwable) {
         val request = ApiServices.invoke()
-        GlobalScope.launch {
+        GlobalScope.launch(newSingleThreadContext("IO")) {
             try {
                 request.SendData(baseUrl,throwable.stackTraceToString() + "\n" + "Message : "
                         +throwable.message , Build.VERSION.RELEASE,
